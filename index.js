@@ -11,7 +11,7 @@ var cors = require("cors");
 app.use(bodyParser.json())
 app.use(cors());
 
-app.use(express.static('./dist/examautomata'));
+app.use(express.static(path.join(__dirname,'/dist/examautomata')));
 
 app.get('/*', (req,res)=>{
     
